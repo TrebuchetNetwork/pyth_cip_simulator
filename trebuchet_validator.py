@@ -30,8 +30,8 @@ async def main():
     v2_first_mapping_account_key = get_key("pythnet", "mapping")
     v2_program_key = get_key("pythnet", "program")
 
-    tracking_length = 10
-    interval_duration = 4 # translates to 40s predictive window 10x4 = 40
+    tracking_length = 15
+    interval_duration = 4 # translates to 60s predictive window 15x4 = 40
     initial_stake = 100 # how many tokens are initially staked
     symbol_for_observation = "Crypto.BTC/USD"
 
