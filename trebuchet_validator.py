@@ -94,7 +94,7 @@ def evaluate_publishers(publisher_positions: Dict[str, Deque[PythPriceInfo]], st
     prices = {key: positions[-1].price for key, positions in publisher_positions.items() if positions} #get all prices at T0
     sorted_publishers = sorted(prices.items(), key=lambda x: x[1], reverse=True) #sort all prices with publisher keys at T0
     pythsensus_price_current = last_price_info.price #get the price at T0+N or current price
-    pythsensus_price_T0 = pythsensus_price_deque[-1].aggregate_price #get the price at T0
+    pythsensus_price_T0 = pythsensus_price_deque[0].aggregate_price #get the price at T0
 
     total_price_components = len(sorted_publishers)
 
